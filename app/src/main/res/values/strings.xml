@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Code Green</string>
+    <string name="title_home">Home</string>
+    <string name="title_leaderboard">Leaderboard</string>
+    <string name="title_overview">Weekly Overview</string>
+    <string name="title_footprint">Carbon Footprint</string>
+    <string name="title_scan">Scan Product</string>
+    <string name="title_userprofile">User Profile</string>
+    <string name="title_settings">Settings</string>
+</resources>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.example.codegreen.ui.home.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/navigation_leaderboard"
+        android:name="com.example.codegreen.ui.leaderboard.LeaderboardFragment"
+        android:label="@string/title_leaderboard"
+        tools:layout="@layout/fragment_leaderboard" />
+
+    <fragment
+        android:id="@+id/navigation_overview"
+        android:name="com.example.codegreen.ui.overview.OverviewFragment"
+        android:label="@string/title_overview"
+        tools:layout="@layout/fragment_overview" />
+
+    <fragment
+        android:id="@+id/navigation_footprint"
+        android:name="com.example.codegreen.ui.footprint.FootprintFragment"
+        android:label="@string/title_footprint"
+        tools:layout="@layout/fragment_footprint" />
+
+    <fragment
+        android:id="@+id/navigation_scan"
+        android:name="com.example.codegreen.ui.scan.ScanFragment"
+        android:label="@string/title_scan"
+        tools:layout="@layout/fragment_scan" />
+</navigation>
