@@ -1,4 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="HardcodedText">
+    <item
+        android:id="@+id/user_profile_nav"
+        android:title="@string/title_userprofile" />
+    <item
+        android:id="@+id/settings_nav"
+        android:title="@string/title_settings" />
 
 </menu>

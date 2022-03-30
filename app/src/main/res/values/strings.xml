@@ -7,4 +7,6 @@
     <string name="title_scan">Scan Product</string>
     <string name="title_userprofile">User Profile</string>
     <string name="title_settings">Settings</string>
+    <string name="nav_open">Open</string>
+    <string name="nav_close">Close</string>
 </resources>
