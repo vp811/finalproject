@@ -7,16 +7,120 @@
     tools:context=".ui.settings.SettingsFragment">
 
     <TextView
-        android:id="@+id/text_settings"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:id="@+id/settingsHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="22dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Settings"
+        android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/largeTextDisplay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Large Text (Requires Restart)"
+        app:layout_constraintBottom_toBottomOf="@+id/largeTextSwitch"
+        app:layout_constraintStart_toStartOf="@+id/settingsHeader"
+        app:layout_constraintTop_toTopOf="@+id/largeTextSwitch" />
+
+    <TextView
+        android:id="@+id/notificationsDisplay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Notifications"
+        app:layout_constraintBottom_toBottomOf="@+id/notificationsSwitch"
+        app:layout_constraintStart_toStartOf="@+id/settingsHeader"
+        app:layout_constraintTop_toBottomOf="@+id/largeTextSwitch" />
+
+    <TextView
+        android:id="@+id/removeCO2Header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Remove CO2 Data"
+        app:layout_constraintStart_toStartOf="@+id/settingsHeader"
+        app:layout_constraintTop_toBottomOf="@+id/divider" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="408dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="20dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/notificationsSwitch" />
+
+    <TextView
+        android:id="@+id/co2DataExplain"
+        android:layout_width="368dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        android:text="Delete all of the CO2 data that you have entered into this app. Once deleted, you will NOT be able to retrieve any of the information."
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/removeCO2Header"
+        app:layout_constraintTop_toBottomOf="@+id/removeCO2Header" />
+
+    <Button
+        android:id="@+id/deleteCO2Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:text="Delete CO2 Data"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/co2DataExplain" />
+
+    <View
+        android:id="@+id/divider2"
+        android:layout_width="409dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="20dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/deleteCO2Button" />
+
+    <Button
+        android:id="@+id/disableAccountButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Disable Account"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider2" />
+
+    <Switch
+        android:id="@+id/largeTextSwitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:layout_marginBottom="8dp"
+        android:minWidth="48dp"
+        android:minHeight="48dp"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/notificationsSwitch"
+        app:layout_constraintStart_toEndOf="@+id/largeTextDisplay"
+        app:layout_constraintTop_toBottomOf="@+id/settingsHeader" />
+
+    <Switch
+        android:id="@+id/notificationsSwitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="8dp"
+        android:minWidth="48dp"
+        android:minHeight="48dp"
+        app:layout_constraintStart_toEndOf="@+id/notificationsDisplay"
+        app:layout_constraintTop_toBottomOf="@+id/largeTextSwitch" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

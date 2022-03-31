@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.userprofile.UserProfileFragment">
+
+    <TextView
+        android:id="@+id/userProfileHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="19dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="24dp"
+        android:text="Name:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/locationBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Location:"
+        app:layout_constraintStart_toStartOf="@+id/inputAboutMe"
+        app:layout_constraintTop_toBottomOf="@+id/inputAboutMe" />
+
+    <TextView
+        android:id="@+id/aboutMeHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="About Me:"
+        app:layout_constraintStart_toStartOf="@+id/inputNameBox"
+        app:layout_constraintTop_toBottomOf="@+id/inputNameBox" />
+
+    <EditText
+        android:id="@+id/inputLocationBox"
+        android:layout_width="174dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="Location"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="@+id/locationBox"
+        app:layout_constraintTop_toBottomOf="@+id/locationBox" />
+
+    <EditText
+        android:id="@+id/inputNameBox"
+        android:layout_width="165dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="Name"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="@+id/userProfileHeader"
+        app:layout_constraintTop_toBottomOf="@+id/userProfileHeader" />
+
+    <Button
+        android:id="@+id/cancelButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="24dp"
+        android:text="Cancel"
+        android:onClick="onClickCancel"
+        app:layout_constraintEnd_toStartOf="@+id/saveButton"
+        app:layout_constraintHorizontal_bias="0.968"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputLocationBox" />
+
+    <Button
+        android:id="@+id/saveButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:text="Save"
+        android:onClick="onClickSave"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/cancelButton" />
+
+    <EditText
+        android:id="@+id/inputAboutMe"
+        android:layout_width="386dp"
+        android:layout_height="167dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:hint="Describe yourself!"
+        android:inputType="textMultiLine"
+        android:maxLength="120"
+        app:layout_constraintStart_toStartOf="@+id/aboutMeHeader"
+        app:layout_constraintTop_toBottomOf="@+id/aboutMeHeader" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

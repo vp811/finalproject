@@ -52,7 +52,7 @@ public class HomeFragment extends Fragment {
         binding.homeScanIcon.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
-                Navigation.findNavController(view).navigate(R.id.action_navigation_home_to_navigation_scan);
+                Navigation.findNavController(view).navigate(R.id.action_navigation_home_to_scannerFragment);
             }
         });
 

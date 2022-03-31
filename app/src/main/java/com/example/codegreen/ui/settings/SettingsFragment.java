@@ -7,32 +7,66 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
+import androidx.fragment.app.DialogFragment;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
+import androidx.navigation.Navigation;
 
+import com.example.codegreen.MainActivity;
 import com.example.codegreen.R;
+import com.example.codegreen.databinding.FragmentSettingsBinding;
+
+import java.util.Objects;
 
 public class SettingsFragment extends Fragment {
-
-    private SettingsViewModel settingsViewModel;
+    private FragmentSettingsBinding binding;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        settingsViewModel =
-                new ViewModelProvider(this).get(SettingsViewModel.class);
 
-        View root = inflater.inflate(R.layout.fragment_settings, container, false);
+        MainActivity mainActivity = (MainActivity) getActivity();
+        assert mainActivity != null;
+        binding = FragmentSettingsBinding.inflate(inflater, container, false);
+        View root = binding.getRoot();
 
-        final TextView textView = root.findViewById(R.id.text_settings);
-        settingsViewModel.getText().observe(this, new Observer<String>() {
+        binding.deleteCO2Button.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onChanged(@Nullable String s) {
+            public void onClick(View view) {
+                DialogFragment dialogue = new ConfirmDeleteCO2DataFragment();
+                dialogue.show(mainActivity.getSupportFragmentManager(), "ConfirmDeleteCO2DataFragment");
+            }
+        });
+        binding.disableAccountButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                DialogFragment dialogue = new ConfirmClearUserFragment();
+                dialogue.show(mainActivity.getSupportFragmentManager(), "ConfirmClearUserFragment");
+            }
+        });
 
-                textView.setText(s);
+        binding.largeTextSwitch.setChecked(mainActivity.getUser().isLargeText());
+        binding.notificationsSwitch.setChecked(mainActivity.getUser().isNotifications());
+
+        // Having it require a restart is severely suboptimal, but I cannot see another good way to apply it since themes only apply on initial view. (And I couldn't even get setTextSize to work for an example text).
+        binding.largeTextSwitch.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mainActivity.getUser().setLargeText(binding.largeTextSwitch.isActivated());
+            }
+        });
+
+        binding.notificationsSwitch.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mainActivity.getUser().setLargeText(binding.notificationsSwitch.isActivated());
             }
         });
         return root;
+    }
+
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        binding = null;
     }
 }

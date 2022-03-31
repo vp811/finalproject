@@ -7,16 +7,174 @@
     tools:context=".ui.userprofile.UserProfileFragment">
 
     <TextView
-        android:id="@+id/text_userprofile"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
+        android:id="@+id/userProfileHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="19dp"
+        android:layout_marginStart="12dp"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="User Profile"
+        app:layout_constraintBottom_toTopOf="@+id/userMilestone"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/nameBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="Name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/userMilestone"
+        app:layout_constraintTop_toTopOf="@+id/userMilestone" />
+
+    <TextView
+        android:id="@+id/locationBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Location"
+        app:layout_constraintBottom_toBottomOf="@+id/userMilestone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/nameBox"
+        app:layout_constraintTop_toBottomOf="@+id/nameBox"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/aboutMeHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="About Me"
+        app:layout_constraintBottom_toTopOf="@+id/aboutMeContents"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/userMilestone"
+        app:layout_constraintTop_toBottomOf="@+id/userMilestone" />
+
+    <TextView
+        android:id="@+id/aboutMeContents"
+        android:layout_width="0dp"
+        android:layout_height="91dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="8dp"
+        android:text="AboutMe"
+        app:layout_constraintBottom_toTopOf="@+id/milestonesHeader"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/aboutMeHeader"
+        app:layout_constraintTop_toBottomOf="@+id/aboutMeHeader" />
+
+    <TextView
+        android:id="@+id/milestonesHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="330dp"
+        android:layout_marginBottom="12dp"
+        android:text="Milestones"
+        app:layout_constraintBottom_toTopOf="@+id/viewMilestoneOne"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/aboutMeContents"
+        app:layout_constraintTop_toBottomOf="@+id/aboutMeContents" />
+
+    <ImageView
+        android:id="@+id/viewMilestoneOne"
+        android:layout_width="32dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:src="@android:drawable/btn_star"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toStartOf="@+id/viewMilestoneTwo"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="@+id/milestonesHeader"
+        app:layout_constraintTop_toBottomOf="@+id/milestonesHeader" />
+
+    <ImageView
+        android:id="@+id/viewMilestoneTwo"
+        android:layout_width="34dp"
+        android:layout_height="32dp"
+        android:src="@android:drawable/checkbox_on_background"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toStartOf="@+id/viewMilestoneThree"
+        app:layout_constraintStart_toEndOf="@+id/viewMilestoneOne"
+        app:layout_constraintTop_toTopOf="@+id/viewMilestoneOne" />
+
+    <ImageView
+        android:id="@+id/viewMilestoneThree"
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+        android:src="@android:drawable/ic_dialog_map"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toStartOf="@+id/viewMilestoneFour"
+        app:layout_constraintStart_toEndOf="@+id/viewMilestoneTwo"
+        app:layout_constraintTop_toTopOf="@+id/viewMilestoneTwo"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <ImageView
+        android:id="@+id/viewMilestoneFour"
+        android:layout_width="35dp"
+        android:layout_height="32dp"
+        android:src="@android:drawable/stat_notify_sync"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toStartOf="@+id/viewMilestoneFive"
+        app:layout_constraintStart_toEndOf="@+id/viewMilestoneThree"
+        app:layout_constraintTop_toTopOf="@+id/viewMilestoneThree" />
+
+    <ImageView
+        android:id="@+id/viewMilestoneFive"
+        android:layout_width="34dp"
+        android:layout_height="32dp"
+        android:layout_marginEnd="12dp"
+        android:src="?android:attr/actionModeWebSearchDrawable"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/viewMilestoneFour"
+        app:layout_constraintTop_toTopOf="@+id/viewMilestoneFour" />
+
+    <Button
+        android:id="@+id/moreMilestonesButton"
+        android:layout_width="wrap_content"
+        android:layout_height="41dp"
+        android:layout_marginTop="12dp"
+        android:capitalize="none"
+        android:includeFontPadding="false"
+        android:insetBottom="0dp"
+        android:text="View more milestones"
+        android:textAllCaps="false"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="@+id/viewMilestoneFive"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/viewMilestoneFour"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <Button
+        android:id="@+id/editUserProfileButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Edit User Profile"
+        android:onClick="onClickEditProfile"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.499"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/moreMilestonesButton"
+        app:layout_constraintVertical_bias="0.021" />
+
+    <ImageView
+        android:id="@+id/userMilestone"
+        android:layout_width="50dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="8dp"
+        android:src="@android:drawable/btn_star"
+        app:layout_constraintBottom_toTopOf="@+id/aboutMeHeader"
+        app:layout_constraintStart_toStartOf="@+id/userProfileHeader"
+        app:layout_constraintTop_toBottomOf="@+id/userProfileHeader" />
 </androidx.constraintlayout.widget.ConstraintLayout>

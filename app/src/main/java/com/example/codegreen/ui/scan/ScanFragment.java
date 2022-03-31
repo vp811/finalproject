@@ -30,19 +30,6 @@ public class ScanFragment extends Fragment {
         binding = FragmentScanBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        binding.buttonScanUser.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View view){
-                Navigation.findNavController(view).navigate(R.id.action_navigation_scan_to_navigation_userprofile);
-            }
-        });
-
-        binding.buttonScanSettings.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View view){
-                Navigation.findNavController(view).navigate(R.id.action_navigation_scan_to_navigation_settings);
-            }
-        });
 
         View roots = inflater.inflate(R.layout.fragment_scan, container, false);
 

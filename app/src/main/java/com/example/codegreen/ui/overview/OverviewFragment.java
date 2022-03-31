@@ -46,14 +46,7 @@ public class OverviewFragment extends Fragment {
 
         View roots = inflater.inflate(R.layout.fragment_overview, container, false);
 
-        final TextView textView = root.findViewById(R.id.text_overview);
-        overviewViewModel.getText().observe(this, new Observer<String>() {
-            @Override
-            public void onChanged(@Nullable String s) {
 
-                textView.setText(s);
-            }
-        });
         return root;
     }
 }

@@ -12,25 +12,39 @@
         tools:layout="@layout/fragment_home" >
         <action
             android:id="@+id/action_navigation_home_to_navigation_userprofile"
-            app:destination="@id/navigation_userprofile" />
+            app:destination="@id/navigation_userprofile"
+            app:popUpTo="@id/navigation_home"
+            app:popUpToInclusive="true" />
         <action
             android:id="@+id/action_navigation_home_to_navigation_settings"
-            app:destination="@id/navigation_settings" />
+            app:destination="@id/navigation_settings"
+            app:popUpTo="@id/navigation_home"
+            app:popUpToInclusive="true" />
         <action
             android:id="@+id/action_navigation_home_to_navigation_footprint"
-            app:destination="@id/navigation_footprint" />
+            app:destination="@id/navigation_footprint"
+            app:popUpTo="@id/navigation_home"
+            app:popUpToInclusive="true" />
         <action
             android:id="@+id/action_navigation_home_to_navigation_leaderboard"
-            app:destination="@id/navigation_leaderboard" />
+            app:destination="@id/navigation_leaderboard"
+            app:popUpTo="@id/navigation_home"
+            app:popUpToInclusive="true" />
         <action
             android:id="@+id/action_navigation_home_to_navigation_overview"
-            app:destination="@id/navigation_overview" />
+            app:destination="@id/navigation_overview"
+            app:popUpTo="@id/navigation_home"
+            app:popUpToInclusive="true" />
         <action
             android:id="@+id/action_navigation_home_to_navigation_footprint2"
-            app:destination="@id/navigation_footprint" />
+            app:destination="@id/navigation_footprint"
+            app:popUpTo="@id/navigation_home"
+            app:popUpToInclusive="true" />
         <action
-            android:id="@+id/action_navigation_home_to_navigation_scan"
-            app:destination="@id/navigation_scan" />
+            android:id="@+id/action_navigation_home_to_scannerFragment"
+            app:destination="@id/navigation_scanner"
+            app:popUpTo="@id/navigation_home"
+            app:popUpToInclusive="true" />
     </fragment>
 
     <fragment
@@ -40,10 +54,19 @@
         tools:layout="@layout/fragment_leaderboard" >
         <action
             android:id="@+id/action_navigation_leaderboard_to_navigation_userprofile"
-            app:destination="@id/navigation_userprofile" />
+            app:destination="@id/navigation_userprofile"
+            app:popUpTo="@id/navigation_leaderboard"
+            app:popUpToInclusive="true" />
         <action
             android:id="@+id/action_navigation_leaderboard_to_navigation_settings"
-            app:destination="@id/navigation_settings" />
+            app:destination="@id/navigation_settings"
+            app:popUpTo="@id/navigation_leaderboard"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_navigation_leaderboard_to_scannerFragment"
+            app:destination="@id/navigation_scanner"
+            app:popUpTo="@id/navigation_leaderboard"
+            app:popUpToInclusive="true" />
     </fragment>
 
     <fragment
@@ -53,10 +76,19 @@
         tools:layout="@layout/fragment_overview" >
         <action
             android:id="@+id/action_navigation_overview_to_navigation_settings"
-            app:destination="@id/navigation_settings" />
+            app:destination="@id/navigation_settings"
+            app:popUpTo="@id/navigation_overview"
+            app:popUpToInclusive="true" />
         <action
             android:id="@+id/action_navigation_overview_to_navigation_userprofile"
-            app:destination="@id/navigation_userprofile" />
+            app:destination="@id/navigation_userprofile"
+            app:popUpTo="@id/navigation_overview"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_navigation_overview_to_scannerFragment"
+            app:destination="@id/navigation_scanner"
+            app:popUpTo="@id/navigation_overview"
+            app:popUpToInclusive="true" />
     </fragment>
 
     <fragment
@@ -66,36 +98,75 @@
         tools:layout="@layout/fragment_footprint" >
         <action
             android:id="@+id/action_navigation_footprint_to_navigation_settings"
-            app:destination="@id/navigation_settings" />
+            app:destination="@id/navigation_settings"
+            app:popUpTo="@id/navigation_footprint"
+            app:popUpToInclusive="true" />
         <action
             android:id="@+id/action_navigation_footprint_to_navigation_userprofile"
-            app:destination="@id/navigation_userprofile" />
-    </fragment>
-
-    <fragment
-        android:id="@+id/navigation_scan"
-        android:name="com.example.codegreen.ui.scan.ScanFragment"
-        android:label="@string/title_scan"
-        tools:layout="@layout/fragment_scan" >
+            app:destination="@id/navigation_userprofile"
+            app:popUpTo="@id/navigation_footprint"
+            app:popUpToInclusive="true" />
         <action
-            android:id="@+id/action_navigation_scan_to_navigation_settings"
-            app:destination="@id/navigation_settings" />
-        <action
-            android:id="@+id/action_navigation_scan_to_navigation_userprofile"
-            app:destination="@id/navigation_userprofile" />
+            android:id="@+id/action_navigation_footprint_to_scannerFragment"
+            app:destination="@id/navigation_scanner"
+            app:popUpTo="@id/navigation_footprint"
+            app:popUpToInclusive="true" />
     </fragment>
 
     <fragment
         android:id="@+id/navigation_settings"
         android:name="com.example.codegreen.ui.settings.SettingsFragment"
         android:label="@string/title_settings"
-        tools:layout="@layout/fragment_scan" />
+        tools:layout="@layout/fragment_scan" >
+        <action
+            android:id="@+id/action_navigation_settings_to_scannerFragment"
+            app:destination="@id/navigation_scanner"
+            app:popUpTo="@id/navigation_settings"
+            app:popUpToInclusive="true" />
+    </fragment>
 
     <fragment
         android:id="@+id/navigation_userprofile"
         android:name="com.example.codegreen.ui.userprofile.UserProfileFragment"
         android:label="@string/title_userprofile"
-        tools:layout="@layout/fragment_scan" />
+        tools:layout="@layout/fragment_scan" >
+        <action
+            android:id="@+id/action_navigation_userprofile_to_userProfileMilestonesFragment"
+            app:destination="@id/userProfileMilestonesFragment" />
+        <action
+            android:id="@+id/action_navigation_userprofile_to_scannerFragment"
+            app:destination="@id/navigation_scanner"
+            app:popUpTo="@id/navigation_userprofile"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/userProfileMilestonesFragment"
+        android:name="com.example.codegreen.ui.userprofile.UserProfileMilestonesFragment"
+        android:label="UserProfileMilestonesFragment" />
+    <fragment
+        android:id="@+id/navigation_scanner"
+        android:name="com.example.codegreen.ui.scanner.ScannerFragment"
+        android:label="Scanner"
+        tools:layout="@layout/fragment_scanner" >
+        <action
+            android:id="@+id/action_scannerFragment_to_scannedFragment"
+            app:destination="@id/scannedFragment2"
+            app:popUpTo="@id/navigation_scanner"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/scannedFragment2"
+        android:name="com.example.codegreen.ui.scanned.ScannedFragment"
+        android:label="Scanned Item" >
+        <action
+            android:id="@+id/action_scannedFragment2_to_scannerFragment"
+            app:destination="@id/navigation_scanner"
+            app:popUpTo="@id/scannedFragment2"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_scannedFragment2_to_navigation_home"
+            app:destination="@id/navigation_home" />
+    </fragment>
 
 
 </navigation>

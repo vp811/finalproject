@@ -1,16 +1,16 @@
-package com.example.codegreen.ui.settings;
+package com.example.codegreen.ui.scanned;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-public class SettingsViewModel extends ViewModel {
+public class ScannedViewModel extends ViewModel {
 
-    private MutableLiveData<String> mText;
+    private final MutableLiveData<String> mText;
 
-    public SettingsViewModel() {
+    public ScannedViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("This is the Settings fragment");
+        mText.setValue("This is scanned fragment");
     }
 
     public LiveData<String> getText() {
