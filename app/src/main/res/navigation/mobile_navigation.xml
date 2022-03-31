@@ -11,36 +11,79 @@
         android:label="@string/title_home"
         tools:layout="@layout/fragment_home" >
         <action
+            android:id="@+id/action_navigation_home_to_navigation_userprofile"
+            app:destination="@id/navigation_userprofile" />
+        <action
             android:id="@+id/action_navigation_home_to_navigation_settings"
             app:destination="@id/navigation_settings" />
         <action
-            android:id="@+id/action_navigation_home_to_navigation_userprofile"
-            app:destination="@id/navigation_userprofile" />
+            android:id="@+id/action_navigation_home_to_navigation_footprint"
+            app:destination="@id/navigation_footprint" />
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_leaderboard"
+            app:destination="@id/navigation_leaderboard" />
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_overview"
+            app:destination="@id/navigation_overview" />
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_footprint2"
+            app:destination="@id/navigation_footprint" />
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_scan"
+            app:destination="@id/navigation_scan" />
     </fragment>
 
     <fragment
         android:id="@+id/navigation_leaderboard"
         android:name="com.example.codegreen.ui.leaderboard.LeaderboardFragment"
         android:label="@string/title_leaderboard"
-        tools:layout="@layout/fragment_leaderboard" />
+        tools:layout="@layout/fragment_leaderboard" >
+        <action
+            android:id="@+id/action_navigation_leaderboard_to_navigation_userprofile"
+            app:destination="@id/navigation_userprofile" />
+        <action
+            android:id="@+id/action_navigation_leaderboard_to_navigation_settings"
+            app:destination="@id/navigation_settings" />
+    </fragment>
 
     <fragment
         android:id="@+id/navigation_overview"
         android:name="com.example.codegreen.ui.overview.OverviewFragment"
         android:label="@string/title_overview"
-        tools:layout="@layout/fragment_overview" />
+        tools:layout="@layout/fragment_overview" >
+        <action
+            android:id="@+id/action_navigation_overview_to_navigation_settings"
+            app:destination="@id/navigation_settings" />
+        <action
+            android:id="@+id/action_navigation_overview_to_navigation_userprofile"
+            app:destination="@id/navigation_userprofile" />
+    </fragment>
 
     <fragment
         android:id="@+id/navigation_footprint"
         android:name="com.example.codegreen.ui.footprint.FootprintFragment"
         android:label="@string/title_footprint"
-        tools:layout="@layout/fragment_footprint" />
+        tools:layout="@layout/fragment_footprint" >
+        <action
+            android:id="@+id/action_navigation_footprint_to_navigation_settings"
+            app:destination="@id/navigation_settings" />
+        <action
+            android:id="@+id/action_navigation_footprint_to_navigation_userprofile"
+            app:destination="@id/navigation_userprofile" />
+    </fragment>
 
     <fragment
         android:id="@+id/navigation_scan"
         android:name="com.example.codegreen.ui.scan.ScanFragment"
         android:label="@string/title_scan"
-        tools:layout="@layout/fragment_scan" />
+        tools:layout="@layout/fragment_scan" >
+        <action
+            android:id="@+id/action_navigation_scan_to_navigation_settings"
+            app:destination="@id/navigation_settings" />
+        <action
+            android:id="@+id/action_navigation_scan_to_navigation_userprofile"
+            app:destination="@id/navigation_userprofile" />
+    </fragment>
 
     <fragment
         android:id="@+id/navigation_settings"
