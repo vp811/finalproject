@@ -157,7 +157,7 @@ public class MainActivity extends AppCompatActivity {
         // Creating a method setData()
         // to set the text in text view and pie chart
         //This function is causing errors.
-         //setData();
+         setData();
     }
 
     // Based on Android Studio tutorials, allows use of back button (for things like User Profile Milestones Fragment).
