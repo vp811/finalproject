@@ -15,7 +15,7 @@
     </style>
 
     <style name="FontSizeNormal">
-        <item name="android:textSize">12sp</item>
+        <item name="android:textSize">14sp</item>
     </style>
     <style name="FontSizeLarge">
         <item name="android:textSize">18sp</item>

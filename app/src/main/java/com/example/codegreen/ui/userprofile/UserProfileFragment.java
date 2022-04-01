@@ -74,7 +74,9 @@ public class UserProfileFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getContext(), EditUserProfileActivity.class);
-
+                intent.putExtra(MainActivity.EXTRA_USERNAME, mainActivity.getUser().getUsername());
+                intent.putExtra(MainActivity.EXTRA_USERABOUT, mainActivity.getUser().getUserAbout());
+                intent.putExtra(MainActivity.EXTRA_LOCATION, mainActivity.getUser().getLocation());
                 getEditingData.launch(intent);
             }
         });

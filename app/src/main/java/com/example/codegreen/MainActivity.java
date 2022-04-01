@@ -35,10 +35,6 @@ public class MainActivity extends AppCompatActivity {
 
     public AppBarConfiguration appBarConfiguration;
 
-    // Create the object of TextView and PieChart class
-    TextView tvFood, tvTransport, tvClothing, tvOthers;
-    PieChart pieChart;
-
     public User makeGenericUser() {
         User user = new User();
         user.setUsername("Default username.");
@@ -79,6 +75,11 @@ public class MainActivity extends AppCompatActivity {
                         R.drawable.ic_gear_black_24dp,
                         4));
         user.setFavoriteMilestone(user.getMilestones().get(2));
+        CO2DataObject co2 = user.getUserCO2Data();
+        co2.setClothing(2.5);
+        co2.setFood(20);
+        co2.setOther(12.5);
+        co2.setTransport(15);
         return user;
     }
 
@@ -93,40 +94,7 @@ public class MainActivity extends AppCompatActivity {
         setTheme(themeId);
     }
 
-    private void setData() {
 
-        // Set the percentage of carbons emitted
-
-        tvFood.setText(Integer.toString(40));
-        tvTransport.setText(Integer.toString(30));
-        tvClothing.setText(Integer.toString(5));
-        tvOthers.setText(Integer.toString(25));
-
-        // Set the data and color to the pie chart
-        pieChart.addPieSlice(
-                new PieModel(
-                        "Food (20KG)",
-                        Integer.parseInt(tvFood.getText().toString()),
-                        Color.parseColor("#FFA726")));
-        pieChart.addPieSlice(
-                new PieModel(
-                        "Transport (15KG)",
-                        Integer.parseInt(tvTransport.getText().toString()),
-                        Color.parseColor("#66BB6A")));
-        pieChart.addPieSlice(
-                new PieModel(
-                        "Others (12.5KG)",
-                        Integer.parseInt(tvOthers.getText().toString()),
-                        Color.parseColor("#29B6F6")));
-        pieChart.addPieSlice(
-                new PieModel(
-                        "Clothing (2.5KG)",
-                        Integer.parseInt(tvClothing.getText().toString()),
-                        Color.parseColor("#EF5350")));
-
-        // To animate the pie chart
-        pieChart.startAnimation();
-    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -145,19 +113,6 @@ public class MainActivity extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_activity_main);
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
         NavigationUI.setupWithNavController(binding.navView, navController);
-
-
-        // Link those objects with their respective id's that we have given in .XML file
-        tvFood = findViewById(R.id.tvFood);
-        tvTransport = findViewById(R.id.tvTransport);
-        tvClothing = findViewById(R.id.tvClothing);
-        tvOthers = findViewById(R.id.tvOthers);
-        pieChart = findViewById(R.id.piechart);
-
-        // Creating a method setData()
-        // to set the text in text view and pie chart
-        //This function is causing errors.
-         setData();
     }
 
     // Based on Android Studio tutorials, allows use of back button (for things like User Profile Milestones Fragment).
