@@ -9,7 +9,7 @@ public class User {
     private String username;
     private String location;
     private String userAbout;
-    private Object userCO2Data; // Stand-in since this part of it is not my section.
+    private CO2DataObject userCO2Data; // Stand-in since this part of it is not my section.
     private ArrayList<Milestone> milestones;
     private Milestone favoriteMilestone;
     private int score;
@@ -23,7 +23,7 @@ public class User {
         location = "Unset Location";
         score = 0;
         userAbout = "Describe yourself!";
-        userCO2Data = null;
+        userCO2Data = new CO2DataObject();
         milestones = new ArrayList<Milestone>();
     }
 
@@ -69,15 +69,16 @@ public class User {
         this.username = username;
     }
 
-    // CO2Data is not part of the section I am handling beyond this, so these are dummy functions for now.
-    public Object getUserCO2Data() {
+    public CO2DataObject getUserCO2Data() {
         return userCO2Data;
     }
-    public void setUserCO2Data(Object userCO2Data) {
+
+    public void setUserCO2Data(CO2DataObject userCO2Data) {
         this.userCO2Data = userCO2Data;
     }
+
     public void clearUserCO2Data() {
-        this.userCO2Data = null;
+        this.userCO2Data = new CO2DataObject();
     }
 
     // Adds a milestone assuming there is not already one with the same ID, returns true if successful, false otherwise.

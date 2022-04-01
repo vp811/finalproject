@@ -23,8 +23,10 @@ public class EditUserProfileActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         binding = ActivityUserEditUserProfileBinding.inflate((getLayoutInflater()));
+        binding.inputLocationBox.setText(getIntent().getStringExtra(MainActivity.EXTRA_LOCATION));
+        binding.inputAboutMe.setText(getIntent().getStringExtra(MainActivity.EXTRA_USERABOUT));
+        binding.inputNameBox.setText(getIntent().getStringExtra(MainActivity.EXTRA_USERNAME));
         setContentView(binding.getRoot());
     }
 

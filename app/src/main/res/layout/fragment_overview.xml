@@ -100,6 +100,7 @@
 
                             <!--Text view to display Food -->
                             <TextView
+                                android:id="@+id/textViewFood"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:paddingLeft="10dp"
@@ -122,6 +123,7 @@
 
                             <!--Text view to display python text -->
                             <TextView
+                                android:id="@+id/textViewTransport"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:paddingLeft="10dp"
@@ -144,6 +146,7 @@
 
                             <!--Text view to display Others text -->
                             <TextView
+                                android:id="@+id/textViewOther"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:paddingLeft="10dp"
@@ -166,6 +169,7 @@
 
                             <!--Text view to display Clothing text -->
                             <TextView
+                                android:id="@+id/textViewClothing"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:paddingLeft="10dp"
