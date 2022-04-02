@@ -153,6 +153,11 @@
             app:destination="@id/scannedFragment2"
             app:popUpTo="@id/navigation_scanner"
             app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_navigation_scanner_to_navigation_home"
+            app:destination="@id/navigation_home"
+            app:popUpTo="@id/navigation_scanner"
+            app:popUpToInclusive="true" />
     </fragment>
     <fragment
         android:id="@+id/scannedFragment2"
@@ -165,7 +170,9 @@
             app:popUpToInclusive="true" />
         <action
             android:id="@+id/action_scannedFragment2_to_navigation_home"
-            app:destination="@id/navigation_home" />
+            app:destination="@id/navigation_home"
+            app:popUpTo="@id/scannedFragment2"
+            app:popUpToInclusive="true" />
     </fragment>
 
 
