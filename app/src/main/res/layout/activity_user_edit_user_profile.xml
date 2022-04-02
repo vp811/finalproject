@@ -13,6 +13,7 @@
         android:layout_marginStart="12dp"
         android:layout_marginTop="24dp"
         android:text="Name:"
+        android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -22,6 +23,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         android:text="Location:"
+        android:textSize="16sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="@+id/inputAboutMe"
         app:layout_constraintTop_toBottomOf="@+id/inputAboutMe" />
 
@@ -31,6 +34,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         android:text="About Me:"
+        android:textSize="16sp"
         app:layout_constraintStart_toStartOf="@+id/inputNameBox"
         app:layout_constraintTop_toBottomOf="@+id/inputNameBox" />
 
