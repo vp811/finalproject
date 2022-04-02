@@ -12,6 +12,7 @@
         android:layout_height="55dp"
         android:autoSizeTextType="uniform"
         android:text="Walking emits no CO2 and can be a great way to explroe your surroundings and discover new things."
+        android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="@+id/Walking"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.363"
@@ -38,15 +39,17 @@
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="131dp"
-        android:layout_height="26dp"
+        android:layout_width="246dp"
+        android:layout_height="22dp"
         android:text="@string/you_scanned_a_bus"
+        android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/Bus"
         app:layout_constraintEnd_toEndOf="@+id/Bus"
-        app:layout_constraintHorizontal_bias="0.083"
+        app:layout_constraintHorizontal_bias="0.413"
         app:layout_constraintStart_toStartOf="@+id/Bus"
         app:layout_constraintTop_toTopOf="@+id/Bus"
-        app:layout_constraintVertical_bias="0.052" />
+        app:layout_constraintVertical_bias="0.05" />
 
     <TextView
         android:id="@+id/Description"
@@ -63,15 +66,17 @@
 
     <TextView
         android:id="@+id/OtherAlternatives"
-        android:layout_width="157dp"
-        android:layout_height="19dp"
+        android:layout_width="236dp"
+        android:layout_height="27dp"
         android:text="Other Alternatives"
+        android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.11"
+        app:layout_constraintHorizontal_bias="0.165"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.318" />
+        app:layout_constraintVertical_bias="0.339" />
 
     <ImageView
         android:id="@+id/imageView3"
@@ -83,19 +88,7 @@
         app:layout_constraintHorizontal_bias="0.131"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.411" />
-
-    <TextView
-        android:id="@+id/Bicycles"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Bicycles"
-        app:layout_constraintBottom_toTopOf="@+id/imageView3"
-        app:layout_constraintEnd_toEndOf="@+id/imageView3"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/imageView3"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.447" />
 
     <TextView
         android:id="@+id/BicycleDescription"
@@ -103,6 +96,7 @@
         android:layout_height="55dp"
         android:autoSizeTextType="uniform"
         android:text="Bicycles emit no CO2 per passenger mile and can be a great alternative to any form of transportation"
+        android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="@+id/imageView3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.363"
@@ -120,7 +114,7 @@
         app:layout_constraintHorizontal_bias="0.131"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.551" />
+        app:layout_constraintVertical_bias="0.586" />
 
     <TextView
         android:id="@+id/textView7"
@@ -128,6 +122,7 @@
         android:layout_height="wrap_content"
         android:autoSizeTextType="uniform"
         android:text="Walking"
+        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/Walking"
         app:layout_constraintEnd_toEndOf="@+id/Walking"
         app:layout_constraintHorizontal_bias="0.0"
@@ -145,19 +140,20 @@
         app:layout_constraintHorizontal_bias="0.131"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.687" />
+        app:layout_constraintVertical_bias="0.723" />
 
     <TextView
         android:id="@+id/Carpool"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Carpool"
+        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/imageView6"
         app:layout_constraintEnd_toEndOf="@+id/imageView6"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/imageView6"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.997" />
 
     <TextView
         android:id="@+id/textView9"
@@ -165,12 +161,13 @@
         android:layout_height="93dp"
         android:autoSizeTextType="uniform"
         android:text="The CO2 emissions per passenger mile can vary greatly depending on passenger count but for situations where public transit is not availible it can be a good alternative"
+        android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.339"
         app:layout_constraintStart_toEndOf="@+id/imageView6"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.706" />
+        app:layout_constraintVertical_bias="0.744" />
 
     <Button
         android:id="@+id/GoHome"
@@ -181,10 +178,10 @@
         android:text="Go Home"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.242"
+        app:layout_constraintHorizontal_bias="0.241"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.891" />
+        app:layout_constraintVertical_bias="0.927" />
 
     <Button
         android:id="@+id/ScanAgain"
@@ -195,9 +192,22 @@
         android:text="Scan Again"
         app:layout_constraintBottom_toBottomOf="@+id/GoHome"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.656"
+        app:layout_constraintHorizontal_bias="0.66"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/GoHome"
         app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/Bicycles"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bicycles"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/imageView3"
+        app:layout_constraintEnd_toEndOf="@+id/imageView3"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/imageView3"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

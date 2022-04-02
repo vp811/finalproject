@@ -36,19 +36,13 @@
         android:orientation="vertical"
         app:layout_constraintTop_toTopOf="parent">
 
-        <TextView
-            android:id="@+id/text_overview"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Hello User, Below is your carbon emissions for this week" />
-
         <RelativeLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@color/color_white"
             tools:context=".MainActivity">
 
             <!-- Card view for displaying the Pie chart and details of pie chart -->
+
             <androidx.cardview.widget.CardView
                 android:id="@+id/cardViewGraph"
                 android:layout_width="match_parent"
@@ -60,6 +54,12 @@
                 app:cardCornerRadius="10dp">
 
                 <!-- Linear layout to display pie chart and details of pie chart-->
+                <TextView
+                    android:id="@+id/text_overview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="   Hello User, Below is your carbon emissions for this week" />
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
