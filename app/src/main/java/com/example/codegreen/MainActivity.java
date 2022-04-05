@@ -40,6 +40,7 @@ public class MainActivity extends AppCompatActivity {
     public User makeGenericUser() {
         User user = new User();
         user.setUsername("Default username.");
+        user.setScore(12);
         user.setLocation("Unset");
         user.setUserAbout("Describe yourself!");
         user.setImage(R.drawable.user);

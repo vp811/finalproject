@@ -83,6 +83,7 @@ public class LeaderboardFragment extends Fragment {
         user5.setScore(2);
 
 
+        userList.add(mainActivity.getUser());
 
         userList.add(
                 user1
